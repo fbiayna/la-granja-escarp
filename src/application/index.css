@@ -1,3 +1,93 @@
+@font-face {
+  font-family: "NeulisAlt-Black";
+  src: url("./assets/fonts/NeulisAlt-Black.otf");
+}
+
+@font-face {
+  font-family: "NeulisAlt-BlackItalic";
+  src: url("./assets/fonts/NeulisAlt-BlackItalic.otf");
+}
+
+@font-face {
+  font-family: "NeulisAlt-Bold";
+  src: url("./assets/fonts/NeulisAlt-Bold.otf");
+}
+
+@font-face {
+  font-family: "NeulisAlt-BoldItalic";
+  src: url("./assets/fonts/NeulisAlt-BoldItalic.otf");
+}
+
+@font-face {
+  font-family: "NeulisAlt-ExtraBold";
+  src: url("./assets/fonts/NeulisAlt-ExtraBold.otf");
+}
+
+@font-face {
+  font-family: "NeulisAlt-ExtraBoldItalic";
+  src: url("./assets/fonts/NeulisAlt-ExtraBoldItalic.otf");
+}
+
+@font-face {
+  font-family: "NeulisAlt-ExtraLight";
+  src: url("./assets/fonts/NeulisAlt-ExtraLight.otf");
+}
+
+@font-face {
+  font-family: "NeulisAlt-ExtraLightItalic";
+  src: url("./assets/fonts/NeulisAlt-ExtraLightItalic.otf");
+}
+
+@font-face {
+  font-family: "NeulisAlt-Italic";
+  src: url("./assets/fonts/NeulisAlt-Italic.otf");
+}
+
+@font-face {
+  font-family: "NeulisAlt-Light";
+  src: url("./assets/fonts/NeulisAlt-Light.otf");
+}
+
+@font-face {
+  font-family: "NeulisAlt-LightItalic";
+  src: url("./assets/fonts/NeulisAlt-LightItalic.otf");
+}
+
+@font-face {
+  font-family: "NeulisAlt-Medium";
+  src: url("./assets/fonts/NeulisAlt-Medium.otf");
+}
+
+@font-face {
+  font-family: "NeulisAlt-MediumItalic";
+  src: url("./assets/fonts/NeulisAlt-MediumItalic.otf");
+}
+
+@font-face {
+  font-family: "NeulisAlt-Regular";
+  src: url("./assets/fonts/NeulisAlt-Regular.otf");
+}
+
+@font-face {
+  font-family: "NeulisAlt-SemiBold";
+  src: url("./assets/fonts/NeulisAlt-SemiBold.otf");
+}
+
+@font-face {
+  font-family: "NeulisAlt-SemiBoldItalic";
+  src: url("./assets/fonts/NeulisAlt-SemiBoldItalic.otf");
+}
+
+@font-face {
+  font-family: "NeulisAlt-Thin";
+  src: url("./assets/fonts/NeulisAlt-Thin.otf");
+}
+
+@font-face {
+  font-family: "NeulisAlt-ThinItalic";
+  src: url("./assets/fonts/NeulisAlt-ThinItalic.otf");
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
