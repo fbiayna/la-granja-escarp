@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 import dayjs from "dayjs";
 import { HelmetProvider } from "react-helmet-async";
+import Home from "../presentation/screen/home";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -16,7 +17,7 @@ root.render(
   <React.StrictMode>
     <HelmetProvider>
       <Router>
-        <h1>La Granja d'Escarp</h1>
+        <Home />
       </Router>
     </HelmetProvider>
   </React.StrictMode>

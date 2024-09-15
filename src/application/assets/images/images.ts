@@ -16,7 +16,7 @@ export class Images {
   }
 
   static get mototurisme() {
-    return require("./mototurisme.jpg");
+    return require("./moturisme.jpg");
   }
 
   static get fishing() {

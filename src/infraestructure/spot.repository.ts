@@ -20,7 +20,7 @@ export class SpotRepository {
       ],
       Logos.town,
       Images.town,
-      ColorsPalette.softOrange,
+      ColorsPalette.goldenAmber,
       "Saber més sobre el municipi",
       "Agenda i notícies"
     ),
@@ -34,7 +34,7 @@ export class SpotRepository {
       ],
       Logos.aiguabarreig,
       Images.aiguabarreig,
-      ColorsPalette.skyBlue,
+      ColorsPalette.slateGray,
       "Saber més sobre l'aiguabarreig"
     ),
     new Spot(
@@ -61,7 +61,7 @@ export class SpotRepository {
       ],
       Logos.cicloturisme,
       Images.cicloturisme,
-      ColorsPalette.forestGreen,
+      ColorsPalette.mutedOlive,
       "Saber més sobre les rutes"
     ),
     new Spot(
@@ -99,7 +99,7 @@ export class SpotRepository {
       ],
       Logos.fruit,
       Images.fruit,
-      ColorsPalette.mutedOlive
+      ColorsPalette.forestGreen
     ),
   ];
 }
