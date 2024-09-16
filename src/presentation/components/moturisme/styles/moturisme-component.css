@@ -14,13 +14,13 @@
 .moturisme-image {
   width: 100%;
   border-radius: 100px;
-  margin-block: 15px
+  margin-block: 20px
 }
 
 .moturisme-title {
   text-transform: uppercase;
-  font-family: "NeulisAlt-Bold";
-  font-size: 16px;
+  font-family: "NeulisAlt-SemiBold";
+  font-size: 15px;
   color: black;
   text-align: center;
   letter-spacing: 2px;
@@ -29,7 +29,7 @@
 
 .moturisme-description {
   font-family: "NeulisAlt-Regular";
-  font-size: 16px;
+  font-size: 15px;
   color: black;
   text-align: justify;
   margin-bottom: 15px;

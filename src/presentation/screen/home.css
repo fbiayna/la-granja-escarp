@@ -1,5 +1,62 @@
-.screen {
+.home-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.home-description-container {
+  padding: 24px;
+}
+
+.home-title {
+  text-transform: uppercase;
+  font-family: "NeulisAlt-SemiBold";
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.home-subtitle {
+  font-family: "NeulisAlt-SemiBold";
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.home-image {
+  width: 100%;
+}
+
+.home-extrainfo {
+  font-family: "NeulisAlt-Italic";
+  font-size: 15px;
+  text-align: start;
+}
+
+.home-description {
+  font-family: "NeulisAlt-Regular";
+  font-size: 15px;
+  text-align: justify;
+}
+
+.home-logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-block: 15px;
+}
+
+.home-logo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+  row-gap: 30px;
+  justify-items: center;
+}
+
+.home-logo-grid > *:nth-last-child(1):nth-child(odd) {
+  grid-column: 1 / -1;
+  justify-self: center;
 }

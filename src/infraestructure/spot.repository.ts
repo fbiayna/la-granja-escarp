@@ -49,7 +49,7 @@ export class SpotRepository {
       ],
       Logos.heritage,
       "Patrimoni",
-      Images.town,
+      Images.heritage,
       ColorsPalette.burntOrange,
       "Saber més sobre la història",
       "Fes un viatge en el temps"

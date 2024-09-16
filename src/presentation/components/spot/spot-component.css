@@ -44,8 +44,8 @@
 
 .spot-title {
   text-transform: uppercase;
-  font-family: "NeulisAlt-Bold";
-  font-size: 16px;
+  font-family: "NeulisAlt-SemiBold";
+  font-size: 15px;
   color: white;
   text-align: center;
   letter-spacing: 2px;
@@ -55,7 +55,7 @@
 
 .spot-description {
   font-family: "NeulisAlt-Regular";
-  font-size: 16px;
+  font-size: 15px;
   color: white;
   text-align: justify;
 }

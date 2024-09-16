@@ -19,6 +19,10 @@ export class Images {
     return require("./moturisme.jpg");
   }
 
+  static get heritage() {
+    return require("./patrimoni.jpeg");
+  }
+
   static get fishing() {
     return require("./pesca.jpeg");
   }
