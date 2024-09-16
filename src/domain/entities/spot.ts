@@ -6,6 +6,7 @@ class Spot {
     readonly title: string,
     readonly descriptions: string[],
     readonly logo: string,
+    readonly logoTitle: string,
     readonly image: string,
     readonly color: string,
     readonly moreInfo?: string,

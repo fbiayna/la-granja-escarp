@@ -8,6 +8,7 @@ export const ColorsPalette = {
   coralPink: "rgb(237, 159, 142)", // Coral Pink
   goldenAmber: "rgb(229, 149, 26)", // Golden Amber
   forestGreen: "rgb(68, 95, 25)", // Forest Green
+  softMistGray: "rgb(241, 243, 245)", // Soft Mist Gray
   black: "rgb(0, 0, 0)", // Black
   white: "rgb(255, 255, 255)", // White
 };

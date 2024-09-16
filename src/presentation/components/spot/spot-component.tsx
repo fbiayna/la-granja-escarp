@@ -44,7 +44,7 @@ const SpotComponent = (props: SpotComponentProps) => {
             </p>
           ))}
         </>
-        <div style={{ height: "20px" }} />
+        <div style={{ height: "15px" }} />
         {props.moreInfo && <ButtonComponent title={props.moreInfo} />}
         {props.extraInfo && <ButtonComponent title={props.extraInfo} />}
       </div>

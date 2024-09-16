@@ -1,0 +1,36 @@
+.moturisme-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 24px;
+  position: relative;
+}
+
+.moturisme-logo {
+  width: 110px;
+}
+
+.moturisme-image {
+  width: 100%;
+  border-radius: 100px;
+  margin-block: 15px
+}
+
+.moturisme-title {
+  text-transform: uppercase;
+  font-family: "NeulisAlt-Bold";
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.moturisme-description {
+  font-family: "NeulisAlt-Regular";
+  font-size: 16px;
+  color: black;
+  text-align: justify;
+  margin-bottom: 15px;
+}

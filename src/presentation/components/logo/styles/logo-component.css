@@ -1,0 +1,17 @@
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-image {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.logo-title {
+  font-family: "NeulisAlt-Regular";
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-align: justify;
+}
