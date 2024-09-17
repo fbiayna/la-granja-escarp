@@ -7,6 +7,7 @@ import "./home.css";
 import MoturismeComponent from "../components/moturisme/moturisme-component";
 import LogoComponent from "../components/logo/logo-component";
 import { Logos } from "../../application/assets/logos/logos";
+import HeaderComponent from "../components/header/header-component";
 
 const Home = () => {
   // Dependencies
@@ -30,6 +31,8 @@ const Home = () => {
 
   return (
     <div className="home-container">
+      <HeaderComponent />
+
       <div className="home-description-container">
         <p className="home-description">
           <span className="home-subtitle">FLUIR</span>{" "}
