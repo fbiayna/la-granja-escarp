@@ -1,4 +1,5 @@
 import { SpotEnum } from "../interfaces/spot.enum";
+import MoreInfo from "./more-info";
 
 class Spot {
   constructor(
@@ -9,8 +10,8 @@ class Spot {
     readonly logoTitle: string,
     readonly image: string,
     readonly color: string,
-    readonly moreInfo?: string,
-    readonly extraInfo?: string
+    readonly moreInfo?: MoreInfo,
+    readonly extraInfo?: MoreInfo
   ) {}
 }
 

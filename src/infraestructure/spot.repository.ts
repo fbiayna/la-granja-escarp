@@ -1,5 +1,6 @@
 import { Images } from "../application/assets/images/images";
 import { Logos } from "../application/assets/logos/logos";
+import MoreInfo from "../domain/entities/more-info";
 import Spot from "../domain/entities/spot";
 import { SpotEnum } from "../domain/interfaces/spot.enum";
 import { ColorsPalette } from "../presentation/utils/colors/palette";
@@ -22,8 +23,14 @@ export class SpotRepository {
       "Vida al poble",
       Images.town,
       ColorsPalette.goldenAmber,
-      "Saber més sobre el municipi",
-      "Agenda i notícies"
+      new MoreInfo(
+        "Saber més sobre el municipi",
+        "https://granjaescarp.ddl.net/el-municipi"
+      ),
+      new MoreInfo(
+        "Agenda i notícies",
+        "https://granjaescarp.ddl.net/actualitat"
+      )
     ),
     new Spot(
       SpotEnum.aiguabarreig,
@@ -37,7 +44,10 @@ export class SpotRepository {
       "Aiguabarreig",
       Images.aiguabarreig,
       ColorsPalette.slateGray,
-      "Saber més sobre l'aiguabarreig"
+      new MoreInfo(
+        "Saber més sobre l'aiguabarreig",
+        "https://granjaescarp.ddl.net/el-municipi/turisme/aiguabarreig-segre-cinca"
+      )
     ),
     new Spot(
       SpotEnum.heritage,
@@ -51,8 +61,14 @@ export class SpotRepository {
       "Patrimoni",
       Images.heritage,
       ColorsPalette.burntOrange,
-      "Saber més sobre la història",
-      "Fes un viatge en el temps"
+      new MoreInfo(
+        "Saber més sobre la història",
+        "https://granjaescarp.ddl.net/el-municipi/historia"
+      ),
+      new MoreInfo(
+        "Fes un viatge en el temps",
+        "https://granjaescarp.ddl.net/descobreix"
+      )
     ),
     new Spot(
       SpotEnum.cicloturisme,
@@ -66,7 +82,10 @@ export class SpotRepository {
       "Cicloturisme",
       Images.cicloturisme,
       ColorsPalette.mutedOlive,
-      "Saber més sobre les rutes"
+      new MoreInfo(
+        "Saber més sobre les rutes",
+        "https://granjaescarp.ddl.net/el-municipi/turisme/rutes-btt-senderisme"
+      )
     ),
     new Spot(
       SpotEnum.fishing,
@@ -79,7 +98,11 @@ export class SpotRepository {
       Logos.fishing,
       "Pesca",
       Images.fishing,
-      ColorsPalette.deepIndigo
+      ColorsPalette.deepIndigo,
+      new MoreInfo(
+        "Saber més sobre la pesca",
+        "https://www.clubpescagranja.com/"
+      )
     ),
     new Spot(
       SpotEnum.flowers,
@@ -93,7 +116,10 @@ export class SpotRepository {
       "Floració",
       Images.flowers,
       ColorsPalette.coralPink,
-      "Saber més sobre la floració"
+      new MoreInfo(
+        "Saber més sobre la floració",
+        "https://granjaescarp.ddl.net/el-municipi/turisme/floracio"
+      )
     ),
     new Spot(
       SpotEnum.fruit,

@@ -1,5 +1,5 @@
 export type ButtonComponentProps = {
   title: string;
-  onClick?: () => void;
+  url: string;
   alternativeColor?: boolean;
 };

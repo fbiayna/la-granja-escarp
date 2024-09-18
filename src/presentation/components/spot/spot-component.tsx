@@ -45,8 +45,18 @@ const SpotComponent = (props: SpotComponentProps) => {
           ))}
         </>
         <div style={{ height: "15px" }} />
-        {props.moreInfo && <ButtonComponent title={props.moreInfo} />}
-        {props.extraInfo && <ButtonComponent title={props.extraInfo} />}
+        {props.moreInfo && (
+          <ButtonComponent
+            title={props.moreInfo.text}
+            url={props.moreInfo.url}
+          />
+        )}
+        {props.extraInfo && (
+          <ButtonComponent
+            title={props.extraInfo.text}
+            url={props.extraInfo.url}
+          />
+        )}
       </div>
       <div className="ellipse-container" style={ellipseContainerBackground}>
         <div className="ellipse" />

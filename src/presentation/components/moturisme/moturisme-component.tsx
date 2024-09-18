@@ -24,7 +24,11 @@ const MoturismeComponent = () => {
         l'hospitalitat de la nostra gent. La Granja d'Escarp t'ofereix una
         experiència inoblidable.
       </p>
-      <ButtonComponent alternativeColor title={"Més informació"} />
+      <ButtonComponent
+        alternativeColor
+        title={"Més informació"}
+        url={"http://moturisme.com/"}
+      />
     </div>
   );
 };
