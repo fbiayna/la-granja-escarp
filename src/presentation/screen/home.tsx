@@ -31,7 +31,7 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <HeaderComponent />
+      <HeaderComponent spots={spots} />
 
       <div className="home-description-container">
         <p className="home-description">
@@ -47,7 +47,7 @@ const Home = () => {
 
       <img className="home-image" src={Logos.waves} />
 
-      <div className="home-description-container">
+      <div id="motius" className="home-description-container">
         <p className="home-title">Motius per a descobrir-nos</p>
         <p className="home-description">
           Som un destí turístic sostenible i diversificat, on la natura, la
@@ -75,7 +75,7 @@ const Home = () => {
       </div>
 
       {spots?.map((spot, index) => {
-        const nextSpot = spots[index + 1];
+        const previousSpot = spots[index - 1];
 
         return (
           <SpotComponent
@@ -83,7 +83,7 @@ const Home = () => {
             {...spot}
             firstItem={index === 0}
             lastItem={index + 1 === spots.length}
-            nextItemColor={nextSpot?.color}
+            previousItemColor={previousSpot?.color}
           />
         );
       })}

@@ -10,6 +10,7 @@ const MoturismeComponent = () => {
 
   return (
     <div
+      id="moturisme"
       style={{ backgroundColor: ColorsPalette.softMistGray }}
       className="moturisme-container"
     >

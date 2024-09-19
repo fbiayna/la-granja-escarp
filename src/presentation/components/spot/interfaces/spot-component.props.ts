@@ -1,13 +1,7 @@
-import MoreInfo from "../../../../domain/entities/more-info";
+import Spot from "../../../../domain/entities/spot";
 
 export type SpotComponentProps = {
-  title: string;
-  descriptions: string[];
-  image: string;
-  color: string;
-  moreInfo?: MoreInfo;
-  extraInfo?: MoreInfo;
   firstItem?: boolean;
   lastItem?: boolean;
-  nextItemColor?: string;
-};
+  previousItemColor?: string;
+} & Spot;

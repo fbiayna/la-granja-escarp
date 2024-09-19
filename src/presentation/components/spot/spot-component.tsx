@@ -7,14 +7,14 @@ import { ColorsPalette } from "../../utils/colors/palette";
 const SpotComponent = (props: SpotComponentProps) => {
   // Styles properties
 
-  const firstItemEllipseContainerBackground: React.CSSProperties | undefined =
-    props.firstItem
+  const lastItemEllipseContainerBackground: React.CSSProperties | undefined =
+    props.lastItem
       ? {
-          background: `linear-gradient(to top, ${props.color} 50%, ${ColorsPalette.white} 50%)`,
+          background: `linear-gradient(to top, ${ColorsPalette.white} 50%, ${props.color} 50%)`,
         }
       : undefined;
   const ellipseContainerBackground: React.CSSProperties = {
-    background: `linear-gradient(to top, ${props.lastItem ? ColorsPalette.white : props.nextItemColor} 50%, ${props.color} 50%)`,
+    background: `linear-gradient(to top, ${props.color} 50%, ${props.firstItem ? ColorsPalette.white : props.previousItemColor} 50%)`,
   };
   const spotContainerBackground: React.CSSProperties = {
     backgroundColor: props.color,
@@ -23,15 +23,10 @@ const SpotComponent = (props: SpotComponentProps) => {
   // Render
 
   return (
-    <>
-      {props.firstItem && (
-        <div
-          className="ellipse-container"
-          style={firstItemEllipseContainerBackground}
-        >
-          <div className="ellipse" />
-        </div>
-      )}
+    <div id={props.id}>
+      <div className="ellipse-container" style={ellipseContainerBackground}>
+        <div className="ellipse" />
+      </div>
       <div className="spot-container" style={spotContainerBackground}>
         <div className="spot-image-container">
           <img src={props.image} />
@@ -58,10 +53,15 @@ const SpotComponent = (props: SpotComponentProps) => {
           />
         )}
       </div>
-      <div className="ellipse-container" style={ellipseContainerBackground}>
-        <div className="ellipse" />
-      </div>
-    </>
+      {props.lastItem && (
+        <div
+          className="ellipse-container"
+          style={lastItemEllipseContainerBackground}
+        >
+          <div className="ellipse" />
+        </div>
+      )}
+    </div>
   );
 };
 

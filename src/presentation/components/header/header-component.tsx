@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./styles/header-component.css";
 import { Logos } from "../../../application/assets/logos/logos";
+import { HeaderComponentProps } from "./interfaces/header-component.props";
 
-const HeaderComponent = () => {
+const HeaderComponent = (props: HeaderComponentProps) => {
   // States
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,19 +24,21 @@ const HeaderComponent = () => {
       />
 
       {isMenuOpen && (
-        <div className={`header-menu ${isMenuOpen ? "open" : ""}`} onClick={onMenuClicked}>
+        <div
+          className={`header-menu ${isMenuOpen ? "open" : ""}`}
+          onClick={onMenuClicked}
+        >
           <ul>
             <li>
-              <a href="#section1">Home</a>
+              <a href="#motius">Motius per a descobrir-nos</a>
             </li>
+            {props.spots?.map((spot) => (
+              <li>
+                <a href={`#${spot.id}`}>{spot.title}</a>
+              </li>
+            ))}
             <li>
-              <a href="#section2">About</a>
-            </li>
-            <li>
-              <a href="#section3">Services</a>
-            </li>
-            <li>
-              <a href="#section4">Contact</a>
+              <a href="#moturisme">Moturisme</a>
             </li>
           </ul>
         </div>
