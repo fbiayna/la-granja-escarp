@@ -21,33 +21,33 @@ const FooterComponent = () => {
           <p className="contact-section-title">Segueix-nos</p>
           <div className="social-icons">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/people/Ajuntament-de-La-Granja-dEscarp/100064506377522/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img src={Logos.facebook} />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/iggranjadescarp/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img src={Logos.instagram} />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://twitter.com/AjGranjaEscarp"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img src={Logos.twitter} />
             </a>
-            <a
+            {/* <a
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img src={Logos.linkedin} />
-            </a>
+            </a> */}
           </div>
         </div>
 
@@ -72,13 +72,31 @@ const FooterComponent = () => {
           <div className="legal-section">
             <ul>
               <li>
-                <a href="#">Avís legal</a>
+                <a
+                  href="https://granjaescarp.ddl.net/avis-legal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Avís legal
+                </a>
               </li>
               <li>
-                <a href="#">Política de privacitat</a>
+                <a
+                  href="https://granjaescarp.ddl.net/politica-de-privacitat"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Política de privacitat
+                </a>
               </li>
               <li>
-                <a href="#">Política de galetes</a>
+                <a
+                  href="https://granjaescarp.ddl.net/politica-de-cookies"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Política de galetes
+                </a>
               </li>
             </ul>
             <p className="contact-section-text">© 2024 Copyright.</p>
