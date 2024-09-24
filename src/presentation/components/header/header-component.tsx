@@ -33,7 +33,7 @@ const HeaderComponent = (props: HeaderComponentProps) => {
               <a href="#motius">Motius per a descobrir-nos</a>
             </li>
             {props.spots?.map((spot) => (
-              <li>
+              <li key={spot.id}>
                 <a href={`#${spot.id}`}>{spot.title}</a>
               </li>
             ))}

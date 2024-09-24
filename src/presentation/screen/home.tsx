@@ -8,6 +8,7 @@ import MoturismeComponent from "../components/moturisme/moturisme-component";
 import LogoComponent from "../components/logo/logo-component";
 import { Logos } from "../../application/assets/logos/logos";
 import HeaderComponent from "../components/header/header-component";
+import FooterComponent from "../components/footer/footer-component";
 
 const Home = () => {
   // Dependencies
@@ -89,6 +90,8 @@ const Home = () => {
       })}
 
       <MoturismeComponent />
+
+      <FooterComponent />
     </div>
   );
 };
