@@ -60,14 +60,14 @@
   justify-self: center;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 950px) {
   .home-description-container {
-    padding: 48px;
+    padding: 75px;
   }
 
   .home-title {
     font-size: 28px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 
   .home-subtitle {
@@ -78,7 +78,10 @@
     height: 200px;
   }
 
-  .home-extrainfo,
+  .home-extrainfo {
+    font-size: 22px;
+  }
+
   .home-description {
     font-size: 20px;
   }
