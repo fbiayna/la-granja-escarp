@@ -34,6 +34,7 @@
   text-align: start;
 }
 
+.home-initial-description,
 .home-description {
   font-family: "NeulisAlt-Regular";
   font-size: 15px;
@@ -60,7 +61,7 @@
   justify-self: center;
 }
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 1024px) {
   .home-description-container {
     padding: 75px;
   }
@@ -71,15 +72,16 @@
   }
 
   .home-subtitle {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   .home-image {
     height: 200px;
   }
 
+  .home-initial-description,
   .home-extrainfo {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .home-description {

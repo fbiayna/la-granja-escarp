@@ -20,7 +20,7 @@ root.render(
       <Router>
         <AppStateContext.Provider
           value={{
-            isNotDesktop: window.innerWidth < 950,
+            isNotDesktop: window.innerWidth < 1024,
             isMobile: window.innerWidth < 768,
           }}
         >

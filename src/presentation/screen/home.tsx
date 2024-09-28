@@ -35,7 +35,7 @@ const Home = () => {
       <HeaderComponent spots={spots} />
 
       <div className="home-description-container">
-        <p className="home-description">
+        <p className="home-initial-description">
           <span className="home-subtitle">FLUIR</span>{" "}
           <span className="home-extrainfo">v. intr.</span> Moviment continu i
           sense impediments d'un element, ja sigui líquid, com l'aigua en un

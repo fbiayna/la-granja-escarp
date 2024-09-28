@@ -49,6 +49,7 @@ const MoturismeComponent = () => {
       <div className="moturisme-image-container">
         <img className="moturisme-image" src={Images.moturisme} />
       </div>
+      <div className="moturisme-separator"/>
       <div className="moturisme-content">
         <img className="moturisme-logo" src={Logos.logoMoturisme} />
         <p className="moturisme-title">

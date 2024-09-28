@@ -43,6 +43,11 @@
   font-family: "NeulisAlt-Regular";
   font-size: 18px;
   margin: 12px 24px;
+  transition: all 0.3s ease-out;
+}
+
+.header-menu ul li:hover {
+  transform: scale(1.02);
 }
 
 .header-menu ul li a:hover {
@@ -70,7 +75,7 @@
   margin-bottom: 20px;
 }
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 1024px) {
   .hero-container {
     height: 750px;
   }
@@ -78,5 +83,14 @@
   .logo-center img {
     max-width: 250px;
     margin-bottom: 20px;
+  }
+
+  .header-menu ul {
+    margin-top: 55px;
+  }
+
+  .header-menu ul li {
+    font-size: 28px;
+    margin: 20px 75px;
   }
 }
