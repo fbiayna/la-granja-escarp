@@ -59,3 +59,58 @@
   color: white;
   text-align: justify;
 }
+
+@media (min-width: 1024px) {
+  .spot-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+  }
+
+  /* Vale trobat! Es necessari crear un contenidor per sobre d'aquest que ocupi el 60% del width i despres aquest contenidor ha de tenir una ellipse que surti per fora tant per la dreta com per l'esquerra (tipus el fet amb ellipse de versio mobile) */
+  .spot-container-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    clip-path: ellipse(70% 50% at 70% 50%);
+    overflow: visible;
+    width: 60%;
+    height: 400px;
+    padding: 10px 75px;
+  }
+
+  .spot-content-image {
+    width: 40%;
+    border-radius: 50%;
+  }
+
+  .spot-image-container {
+    width: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    position: static;
+    margin-bottom: 20px;
+    top: -80px;
+  }
+
+  .spot-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .spot-title {
+    font-size: 20px;
+    margin-bottom: 30px;
+    padding-top: 0px;
+  }
+
+  .spot-description {
+    font-size: 16px;
+    width: 75%;
+    text-align: justify;
+  }
+}
