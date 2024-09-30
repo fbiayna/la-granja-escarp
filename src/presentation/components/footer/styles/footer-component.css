@@ -22,15 +22,15 @@
   text-decoration: underline;
   color: white;
   font-family: "NeulisAlt-Regular";
-  font-size: 12px;
-  margin-bottom: 15px;
+  font-size: 14px;
+  margin-bottom: 20px;
   letter-spacing: 1px;
 }
 
 .contact-section-text {
   color: white;
   font-family: "NeulisAlt-Regular";
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 1px;
 }
 
@@ -46,7 +46,7 @@
 
 .sitemap-section {
   padding: 0;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .sitemap-list {
@@ -57,7 +57,7 @@
 .sitemap-list li {
   color: white;
   font-family: "NeulisAlt-Regular";
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 1px;
 }
 
@@ -90,13 +90,13 @@
   text-align: start;
   padding: 0;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .legal-section li {
   color: white;
   font-family: "NeulisAlt-Regular";
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 1px;
 }
 

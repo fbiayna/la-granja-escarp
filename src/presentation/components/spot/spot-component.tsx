@@ -45,7 +45,7 @@ const SpotComponent = (props: SpotComponentProps) => {
               </p>
             ))}
           </>
-          <div style={{ height: "15px" }} />
+          <div style={{ height: "20px" }} />
           {props.moreInfo && (
             <ButtonComponent
               title={props.moreInfo.text}

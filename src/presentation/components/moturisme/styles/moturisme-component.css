@@ -14,25 +14,25 @@
 .moturisme-image {
   width: 100%;
   border-radius: 100px;
-  margin-block: 20px;
+  margin-block: 25px;
 }
 
 .moturisme-title {
   text-transform: uppercase;
   font-family: "NeulisAlt-SemiBold";
-  font-size: 15px;
+  font-size: 18px;
   color: black;
   text-align: center;
   letter-spacing: 2px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .moturisme-description {
   font-family: "NeulisAlt-Regular";
-  font-size: 15px;
+  font-size: 18px;
   color: black;
   text-align: justify;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 1024px) {
