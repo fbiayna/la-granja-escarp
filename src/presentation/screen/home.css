@@ -11,33 +11,34 @@
 .home-title {
   text-transform: uppercase;
   font-family: "NeulisAlt-SemiBold";
-  font-size: 15px;
+  font-size: 18px;
   text-align: center;
   letter-spacing: 2px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .home-subtitle {
   font-family: "NeulisAlt-SemiBold";
-  font-size: 15px;
+  font-size: 18px;
   text-align: center;
   letter-spacing: 2px;
 }
 
 .home-image {
   width: 100%;
+  height: 100px;
 }
 
 .home-extrainfo {
   font-family: "NeulisAlt-Italic";
-  font-size: 15px;
+  font-size: 18px;
   text-align: start;
 }
 
 .home-initial-description,
 .home-description {
   font-family: "NeulisAlt-Regular";
-  font-size: 15px;
+  font-size: 18px;
   text-align: justify;
 }
 
@@ -46,7 +47,7 @@
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  margin-block: 15px;
+  margin-block: 20px;
 }
 
 .home-logo-grid {
