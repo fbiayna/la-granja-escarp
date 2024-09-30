@@ -74,36 +74,45 @@ const SpotComponent = (props: SpotComponentProps) => {
   return (
     <div id={props.id}>
       <div className={"spot-container"}>
-        <div className={"spot-content-image"} style={spotContainerBackground}>
-          <div className={"spot-image-container"}>
+        <div className={"spot-container-image"} style={spotContainerBackground}>
+          <div className={"spot-ellipse-top"} />
+          <div className={"spot-ellipse-down"} />
+        </div>
+        <div className="spot-image-container">
             <img src={props.image} />
           </div>
-        </div>
-        <div
-          className={"spot-container-description"}
-          style={spotContainerBackground}
-        >
-          <p className="spot-title">{props.title}</p>
-          <>
-            {props.descriptions.map((description) => (
-              <p className="spot-description" key={description}>
-                {description === "<br />" ? <br /> : description}
-              </p>
-            ))}
-          </>
-          <div style={{ height: "15px" }} />
-          {props.moreInfo && (
-            <ButtonComponent
-              title={props.moreInfo.text}
-              url={props.moreInfo.url}
-            />
-          )}
-          {props.extraInfo && (
-            <ButtonComponent
-              title={props.extraInfo.text}
-              url={props.extraInfo.url}
-            />
-          )}
+        {/* <div className={"spot-container-image"}>
+          <div className={"spot-content-image"} style={spotContainerBackground}>
+            
+          </div>
+        </div> */}
+        <div className={"spot-container-description"}>
+          <div
+            className={"spot-content-description"}
+            style={spotContainerBackground}
+          >
+            <p className="spot-title">{props.title}</p>
+            <>
+              {props.descriptions.map((description) => (
+                <p className="spot-description" key={description}>
+                  {description === "<br />" ? <br /> : description}
+                </p>
+              ))}
+            </>
+            <div style={{ height: "15px" }} />
+            {props.moreInfo && (
+              <ButtonComponent
+                title={props.moreInfo.text}
+                url={props.moreInfo.url}
+              />
+            )}
+            {props.extraInfo && (
+              <ButtonComponent
+                title={props.extraInfo.text}
+                url={props.extraInfo.url}
+              />
+            )}
+          </div>
         </div>
       </div>
     </div>
