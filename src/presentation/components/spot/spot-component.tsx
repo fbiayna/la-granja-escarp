@@ -79,13 +79,8 @@ const SpotComponent = (props: SpotComponentProps) => {
           <div className={"spot-ellipse-down"} />
         </div>
         <div className="spot-image-container">
-            <img src={props.image} />
-          </div>
-        {/* <div className={"spot-container-image"}>
-          <div className={"spot-content-image"} style={spotContainerBackground}>
-            
-          </div>
-        </div> */}
+          <img src={props.image} />
+        </div>
         <div className={"spot-container-description"}>
           <div
             className={"spot-content-description"}
@@ -99,7 +94,7 @@ const SpotComponent = (props: SpotComponentProps) => {
                 </p>
               ))}
             </>
-            <div style={{ height: "15px" }} />
+            <div style={{ height: "20px" }} />
             {props.moreInfo && (
               <ButtonComponent
                 title={props.moreInfo.text}

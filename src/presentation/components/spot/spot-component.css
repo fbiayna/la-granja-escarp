@@ -45,34 +45,38 @@
 .spot-title {
   text-transform: uppercase;
   font-family: "NeulisAlt-SemiBold";
-  font-size: 18px;
+  font-size: 15px;
   color: white;
   text-align: center;
   letter-spacing: 2px;
-  margin-bottom: 20px;
-  padding-top: 70px;
+  margin-bottom: 15px;
+  padding-top: 65px;
 }
 
 .spot-description {
   font-family: "NeulisAlt-Regular";
-  font-size: 18px;
+  font-size: 15px;
   color: white;
   text-align: justify;
 }
 
 @media (min-width: 1024px) {
   .spot-container {
+    display: flex;
+    width: 100vw;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 0px;
+    margin-bottom: 20px;
   }
 
   .spot-container-description {
-    width: 65%;
-    height: 400px;
+    width: 70%;
+    height: 450px;
     position: relative;
     overflow: hidden;
+    box-sizing: border-box;
   }
 
   .spot-content-description {
@@ -80,16 +84,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    clip-path: ellipse(50% 50% at 50% 50%);
+    clip-path: ellipse(60% 50% at 50% 50%);
     overflow: visible;
     padding-inline: 75px;
     width: 100%;
-    height: 400px;
+    height: 450px;
   }
 
   .spot-container-image {
-    width: 35%;
-    height: 400px;
+    width: 30%;
+    height: 450px;
     position: relative;
     overflow: hidden;
   }
@@ -97,7 +101,7 @@
   .spot-ellipse-top {
     width: 100%;
     height: 300px;
-    clip-path: ellipse(70% 50% at 60% 50%);
+    clip-path: ellipse(60% 50% at 50% 30%);
     background-color: white;
     overflow: hidden;
     position: absolute;
@@ -108,7 +112,7 @@
   .spot-ellipse-down {
     width: 100%;
     height: 300px;
-    clip-path: ellipse(70% 50% at 60% 50%);
+    clip-path: ellipse(60% 50% at 50% 70%);
     background-color: white;
     overflow: visible;
     position: absolute;
@@ -117,8 +121,8 @@
   }
 
   .spot-image-container {
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -126,6 +130,7 @@
     margin-bottom: 0px;
     top: 0;
     z-index: 1;
+    left: 10%;
   }
 
   .spot-image-container img {
@@ -141,8 +146,14 @@
   }
 
   .spot-description {
-    font-size: 16px;
-    width: 65%;
+    font-size: 18px;
+    width: 55%;
     text-align: justify;
+  }
+}
+
+@media (min-width: 1600px) {
+  .spot-image-container {
+    left: 15%;
   }
 }
