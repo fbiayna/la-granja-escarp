@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { GetAllSpotsUseCase } from "../../application/useCases/getAllSpotsUseCase";
 import { SpotRepository } from "../../infraestructure/spot.repository";
 import Spot from "../../domain/entities/spot";
@@ -9,8 +9,13 @@ import LogoComponent from "../components/logo/logo-component";
 import { Logos } from "../../application/assets/logos/logos";
 import HeaderComponent from "../components/header/header-component";
 import FooterComponent from "../components/footer/footer-component";
+import AppStateContext from "../../application/context/app-state.context";
 
 const Home = () => {
+  // Context
+
+  const { isNotDesktop } = useContext(AppStateContext);
+
   // Dependencies
 
   const useCases = {
@@ -63,17 +68,44 @@ const Home = () => {
         </p>
       </div>
 
-      <div className="home-logo-container">
-        <div className="home-logo-grid">
-          {spots?.map((spot) => (
-            <LogoComponent
-              key={spot.logo}
-              logo={spot.logo}
-              title={spot.logoTitle}
-            />
-          ))}
+      {isNotDesktop ? (
+        <div className="home-logo-container">
+          <div className="home-logo-grid">
+            {spots?.map((spot) => (
+              <LogoComponent
+                key={spot.logo}
+                logo={spot.logo}
+                title={spot.logoTitle}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      ) : (
+        <div className="home-logo-container">
+          <div className="home-logo-grid">
+            {spots
+              ?.slice(0, 4)
+              .map((spot) => (
+                <LogoComponent
+                  key={spot.logo}
+                  logo={spot.logo}
+                  title={spot.logoTitle}
+                />
+              ))}
+          </div>
+          <div className="home-logo-grid second-row">
+            {spots
+              ?.slice(4)
+              .map((spot) => (
+                <LogoComponent
+                  key={spot.logo}
+                  logo={spot.logo}
+                  title={spot.logoTitle}
+                />
+              ))}
+          </div>
+        </div>
+      )}
 
       {spots?.map((spot, index) => {
         const previousSpot = spots[index - 1];

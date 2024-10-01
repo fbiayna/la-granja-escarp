@@ -37,6 +37,7 @@
 
 @media (min-width: 1024px) {
   .moturisme-container {
+    margin-top: 60px;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;

@@ -60,7 +60,7 @@
   text-align: justify;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .spot-container {
     display: flex;
     width: 100vw;
@@ -73,7 +73,7 @@
 
   .spot-container-description {
     width: 70%;
-    height: 450px;
+    height: 500px;
     position: relative;
     overflow: hidden;
   }
@@ -83,11 +83,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    clip-path: ellipse(60% 50% at 50% 50%);
+    clip-path: ellipse(65% 50% at 50% 50%);
     overflow: visible;
-    padding-inline: 75px;
+    margin-left: 10%;
     width: 100%;
-    height: 450px;
+    height: 500px;
   }
 
   .spot-content-description-alternative {
@@ -95,11 +95,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    clip-path: ellipse(60% 50% at 50% 50%);
+    clip-path: ellipse(65% 50% at 50% 50%);
     overflow: visible;
-    padding-inline: 75px;
+    margin-left: -10%;
     width: 100%;
-    height: 450px;
+    height: 500px;
   }
 
   .spot-container-image {
@@ -132,8 +132,8 @@
   }
 
   .spot-image-container {
-    width: 450px;
-    height: 450px;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -145,8 +145,8 @@
   }
 
   .spot-image-container-alternative {
-    width: 450px;
-    height: 450px;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -157,7 +157,8 @@
     right: 10%;
   }
 
-  .spot-image-container img {
+  .spot-image-container img,
+  .spot-image-container-alternative img {
     width: 100%;
     height: 100%;
     object-fit: cover;
