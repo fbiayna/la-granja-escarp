@@ -71,19 +71,59 @@ const SpotComponent = (props: SpotComponentProps) => {
     );
   }
 
+  if (!((props.index + 1) % 2 === 0)) {
+    return (
+      <div id={props.id}>
+        <div className={"spot-container"}>
+          <div
+            className={"spot-container-image"}
+            style={spotContainerBackground}
+          >
+            <div className={"spot-ellipse-top"} />
+            <div className={"spot-ellipse-down"} />
+          </div>
+          <div className="spot-image-container">
+            <img src={props.image} />
+          </div>
+          <div className={"spot-container-description"}>
+            <div
+              className={"spot-content-description"}
+              style={spotContainerBackground}
+            >
+              <p className="spot-title">{props.title}</p>
+              <>
+                {props.descriptions.map((description) => (
+                  <p className="spot-description" key={description}>
+                    {description === "<br />" ? <br /> : description}
+                  </p>
+                ))}
+              </>
+              <div style={{ height: "20px" }} />
+              {props.moreInfo && (
+                <ButtonComponent
+                  title={props.moreInfo.text}
+                  url={props.moreInfo.url}
+                />
+              )}
+              {props.extraInfo && (
+                <ButtonComponent
+                  title={props.extraInfo.text}
+                  url={props.extraInfo.url}
+                />
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div id={props.id}>
       <div className={"spot-container"}>
-        <div className={"spot-container-image"} style={spotContainerBackground}>
-          <div className={"spot-ellipse-top"} />
-          <div className={"spot-ellipse-down"} />
-        </div>
-        <div className="spot-image-container">
-          <img src={props.image} />
-        </div>
         <div className={"spot-container-description"}>
           <div
-            className={"spot-content-description"}
+            className={"spot-content-description-alternative"}
             style={spotContainerBackground}
           >
             <p className="spot-title">{props.title}</p>
@@ -108,6 +148,16 @@ const SpotComponent = (props: SpotComponentProps) => {
               />
             )}
           </div>
+        </div>
+        <div className="spot-image-container-alternative">
+          <img src={props.image} />
+        </div>
+        <div
+          className={"spot-container-image"}
+          style={spotContainerBackground}
+        >
+          <div className={"spot-ellipse-top"} />
+          <div className={"spot-ellipse-down"} />
         </div>
       </div>
     </div>
