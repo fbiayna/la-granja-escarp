@@ -45,17 +45,143 @@
 .spot-title {
   text-transform: uppercase;
   font-family: "NeulisAlt-SemiBold";
-  font-size: 18px;
+  font-size: 15px;
   color: white;
   text-align: center;
   letter-spacing: 2px;
-  margin-bottom: 20px;
-  padding-top: 70px;
+  margin-bottom: 15px;
+  padding-top: 65px;
 }
 
 .spot-description {
   font-family: "NeulisAlt-Regular";
-  font-size: 18px;
+  font-size: 15px;
   color: white;
   text-align: justify;
+}
+
+@media (min-width: 1024px) {
+  .spot-container {
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin-block: 30px;
+  }
+
+  .spot-container-description {
+    width: 70%;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .spot-content-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    clip-path: ellipse(60% 50% at 50% 50%);
+    overflow: visible;
+    padding-inline: 75px;
+    width: 100%;
+    height: 450px;
+  }
+
+  .spot-content-description-alternative {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    clip-path: ellipse(60% 50% at 50% 50%);
+    overflow: visible;
+    padding-inline: 75px;
+    width: 100%;
+    height: 450px;
+  }
+
+  .spot-container-image {
+    width: 30%;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .spot-ellipse-top {
+    width: 100%;
+    height: 300px;
+    clip-path: ellipse(60% 50% at 50% 30%);
+    background-color: white;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transform: translate(0%, -50%);
+  }
+
+  .spot-ellipse-down {
+    width: 100%;
+    height: 300px;
+    clip-path: ellipse(60% 50% at 50% 70%);
+    background-color: white;
+    overflow: visible;
+    position: absolute;
+    bottom: 0;
+    transform: translate(0%, 50%);
+  }
+
+  .spot-image-container {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    margin-bottom: 0px;
+    top: 0;
+    z-index: 1;
+    left: 10%;
+  }
+
+  .spot-image-container-alternative {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    margin-bottom: 0px;
+    top: 0;
+    z-index: 1;
+    right: 10%;
+  }
+
+  .spot-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .spot-title {
+    font-size: 20px;
+    margin-bottom: 30px;
+    padding-top: 0px;
+  }
+
+  .spot-description {
+    font-size: 18px;
+    width: 55%;
+    text-align: justify;
+  }
+}
+
+@media (min-width: 1600px) {
+  .spot-image-container {
+    left: 15%;
+  }
+
+  .spot-image-container-alternative {
+    right: 15%;
+  }
 }

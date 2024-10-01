@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./spot-component.css";
 import { SpotComponentProps } from "./interfaces/spot-component.props";
 import ButtonComponent from "../button/button-component";
 import { ColorsPalette } from "../../utils/colors/palette";
+import AppStateContext from "../../../application/context/app-state.context";
 
 const SpotComponent = (props: SpotComponentProps) => {
+  // Context
+
+  const { isNotDesktop } = useContext(AppStateContext);
+
   // Styles properties
 
   const lastItemEllipseContainerBackground: React.CSSProperties | undefined =
@@ -22,45 +27,139 @@ const SpotComponent = (props: SpotComponentProps) => {
 
   // Render
 
-  return (
-    <div id={props.id}>
-      <div className="ellipse-container" style={ellipseContainerBackground}>
-        <div className="ellipse" />
-      </div>
-      <div className="spot-container" style={spotContainerBackground}>
-        <div className="spot-image-container">
-          <img src={props.image} />
-        </div>
-        <p className="spot-title">{props.title}</p>
-        <>
-          {props.descriptions.map((description) => (
-            <p className="spot-description" key={description}>
-              {description === "<br />" ? <br /> : description}
-            </p>
-          ))}
-        </>
-        <div style={{ height: "20px" }} />
-        {props.moreInfo && (
-          <ButtonComponent
-            title={props.moreInfo.text}
-            url={props.moreInfo.url}
-          />
-        )}
-        {props.extraInfo && (
-          <ButtonComponent
-            title={props.extraInfo.text}
-            url={props.extraInfo.url}
-          />
-        )}
-      </div>
-      {props.lastItem && (
-        <div
-          className="ellipse-container"
-          style={lastItemEllipseContainerBackground}
-        >
+  if (isNotDesktop) {
+    return (
+      <div id={props.id}>
+        <div className="ellipse-container" style={ellipseContainerBackground}>
           <div className="ellipse" />
         </div>
-      )}
+        <div className="spot-container" style={spotContainerBackground}>
+          <div className="spot-image-container">
+            <img src={props.image} />
+          </div>
+          <p className="spot-title">{props.title}</p>
+          <>
+            {props.descriptions.map((description) => (
+              <p className="spot-description" key={description}>
+                {description === "<br />" ? <br /> : description}
+              </p>
+            ))}
+          </>
+          <div style={{ height: "20px" }} />
+          {props.moreInfo && (
+            <ButtonComponent
+              title={props.moreInfo.text}
+              url={props.moreInfo.url}
+            />
+          )}
+          {props.extraInfo && (
+            <ButtonComponent
+              title={props.extraInfo.text}
+              url={props.extraInfo.url}
+            />
+          )}
+        </div>
+        {props.lastItem && (
+          <div
+            className="ellipse-container"
+            style={lastItemEllipseContainerBackground}
+          >
+            <div className="ellipse" />
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  if (!((props.index + 1) % 2 === 0)) {
+    return (
+      <div id={props.id}>
+        <div className={"spot-container"}>
+          <div
+            className={"spot-container-image"}
+            style={spotContainerBackground}
+          >
+            <div className={"spot-ellipse-top"} />
+            <div className={"spot-ellipse-down"} />
+          </div>
+          <div className="spot-image-container">
+            <img src={props.image} />
+          </div>
+          <div className={"spot-container-description"}>
+            <div
+              className={"spot-content-description"}
+              style={spotContainerBackground}
+            >
+              <p className="spot-title">{props.title}</p>
+              <>
+                {props.descriptions.map((description) => (
+                  <p className="spot-description" key={description}>
+                    {description === "<br />" ? <br /> : description}
+                  </p>
+                ))}
+              </>
+              <div style={{ height: "20px" }} />
+              {props.moreInfo && (
+                <ButtonComponent
+                  title={props.moreInfo.text}
+                  url={props.moreInfo.url}
+                />
+              )}
+              {props.extraInfo && (
+                <ButtonComponent
+                  title={props.extraInfo.text}
+                  url={props.extraInfo.url}
+                />
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div id={props.id}>
+      <div className={"spot-container"}>
+        <div className={"spot-container-description"}>
+          <div
+            className={"spot-content-description-alternative"}
+            style={spotContainerBackground}
+          >
+            <p className="spot-title">{props.title}</p>
+            <>
+              {props.descriptions.map((description) => (
+                <p className="spot-description" key={description}>
+                  {description === "<br />" ? <br /> : description}
+                </p>
+              ))}
+            </>
+            <div style={{ height: "20px" }} />
+            {props.moreInfo && (
+              <ButtonComponent
+                title={props.moreInfo.text}
+                url={props.moreInfo.url}
+              />
+            )}
+            {props.extraInfo && (
+              <ButtonComponent
+                title={props.extraInfo.text}
+                url={props.extraInfo.url}
+              />
+            )}
+          </div>
+        </div>
+        <div className="spot-image-container-alternative">
+          <img src={props.image} />
+        </div>
+        <div
+          className={"spot-container-image"}
+          style={spotContainerBackground}
+        >
+          <div className={"spot-ellipse-top"} />
+          <div className={"spot-ellipse-down"} />
+        </div>
+      </div>
     </div>
   );
 };

@@ -82,6 +82,7 @@ const Home = () => {
           <SpotComponent
             key={spot.id}
             {...spot}
+            index={index}
             firstItem={index === 0}
             lastItem={index + 1 === spots.length}
             previousItemColor={previousSpot?.color}

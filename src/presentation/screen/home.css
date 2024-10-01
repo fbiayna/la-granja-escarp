@@ -85,6 +85,11 @@
     font-size: 24px;
   }
 
+  .home-logo-container {
+    margin-block: 20px;
+    margin-bottom: 50px;
+  }
+
   .home-description {
     font-size: 20px;
   }
