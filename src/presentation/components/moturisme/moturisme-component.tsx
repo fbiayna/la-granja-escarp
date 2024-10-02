@@ -22,9 +22,9 @@ const MoturismeComponent = () => {
       >
         <img className="moturisme-logo" src={Logos.logoMoturisme} />
         <img className="moturisme-image" src={Images.moturisme} />
-        <p className="moturisme-title">
+        <h2 className="moturisme-title">
           Descobreix la Granja d'Escarp sobre rodes!
-        </p>
+        </h2>
         <p className="moturisme-description">
           Viu l'aventura del moturisme i explora els racons més encantadors del
           nostre poble. Gaudeix de rutes espectaculars, paisatges únics i
@@ -52,9 +52,9 @@ const MoturismeComponent = () => {
       <div className="moturisme-separator"/>
       <div className="moturisme-content">
         <img className="moturisme-logo" src={Logos.logoMoturisme} />
-        <p className="moturisme-title">
+        <h2 className="moturisme-title">
           Descobreix la Granja d'Escarp sobre rodes!
-        </p>
+        </h2>
         <p className="moturisme-description">
           Viu l'aventura del moturisme i explora els racons més encantadors del
           nostre poble. Gaudeix de rutes espectaculars, paisatges únics i

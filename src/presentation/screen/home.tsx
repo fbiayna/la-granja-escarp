@@ -10,6 +10,7 @@ import { Logos } from "../../application/assets/logos/logos";
 import HeaderComponent from "../components/header/header-component";
 import FooterComponent from "../components/footer/footer-component";
 import AppStateContext from "../../application/context/app-state.context";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   // Context
@@ -37,7 +38,13 @@ const Home = () => {
 
   return (
     <div className="home-container">
+      <Helmet>
+        <title>La Granja d'Escarp · Turisme</title>
+      </Helmet>
+
       <HeaderComponent spots={spots} />
+
+      <h1 className="visually-hidden">La Granja d'Escarp · Turisme</h1>
 
       <div className="home-description-container">
         <p className="home-initial-description">
@@ -54,7 +61,7 @@ const Home = () => {
       <img className="home-image" src={Logos.waves} />
 
       <div id="motius" className="home-description-container">
-        <p className="home-title">Motius per a descobrir-nos</p>
+        <h2 className="home-title">Motius per a descobrir-nos</h2>
         <p className="home-description">
           Som un destí turístic sostenible i diversificat, on la natura, la
           cultura i l'hospitalitat es combinen per oferir experiències úniques i

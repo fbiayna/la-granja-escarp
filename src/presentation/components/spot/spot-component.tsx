@@ -37,7 +37,7 @@ const SpotComponent = (props: SpotComponentProps) => {
           <div className="spot-image-container">
             <img src={props.image} />
           </div>
-          <p className="spot-title">{props.title}</p>
+          <h2 className="spot-title">{props.title}</h2>
           <>
             {props.descriptions.map((description) => (
               <p className="spot-description" key={description}>
@@ -90,7 +90,7 @@ const SpotComponent = (props: SpotComponentProps) => {
               className={"spot-content-description"}
               style={spotContainerBackground}
             >
-              <p className="spot-title">{props.title}</p>
+              <h2 className="spot-title">{props.title}</h2>
               <>
                 {props.descriptions.map((description) => (
                   <p className="spot-description" key={description}>
@@ -126,7 +126,7 @@ const SpotComponent = (props: SpotComponentProps) => {
             className={"spot-content-description-alternative"}
             style={spotContainerBackground}
           >
-            <p className="spot-title">{props.title}</p>
+            <h2 className="spot-title">{props.title}</h2>
             <>
               {props.descriptions.map((description) => (
                 <p className="spot-description" key={description}>
@@ -152,10 +152,7 @@ const SpotComponent = (props: SpotComponentProps) => {
         <div className="spot-image-container-alternative">
           <img src={props.image} />
         </div>
-        <div
-          className={"spot-container-image"}
-          style={spotContainerBackground}
-        >
+        <div className={"spot-container-image"} style={spotContainerBackground}>
           <div className={"spot-ellipse-top"} />
           <div className={"spot-ellipse-down"} />
         </div>
