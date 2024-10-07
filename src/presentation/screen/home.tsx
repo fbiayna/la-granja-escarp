@@ -15,7 +15,7 @@ import { GetPostsFromUserIdUseCase } from "../../application/useCases/get-posts-
 import { InstagramRepository } from "../../infraestructure/instagram.repository";
 import Post from "../../domain/entities/post";
 import { take } from "rxjs";
-import { Carousel } from "react-responsive-carousel";
+import SwiperCarouselComponent from "../components/posts-swiper/posts-swiper-component";
 
 const Home = () => {
   // Context
@@ -144,13 +144,17 @@ const Home = () => {
         );
       })}
 
-      {posts?.length ? (
-        <Carousel>
-          {posts.map((post) => (
-            <img src={post.mediaURL} />
-          ))}
-        </Carousel>
-      ) : null}
+      <h2 className="home-title">Més contingut al nostre Instagram</h2>
+      <div
+        style={{
+          display: "flex",
+          width: "80%",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        {posts?.length ? <SwiperCarouselComponent posts={posts} /> : null}
+      </div>
 
       <MoturismeComponent />
 
