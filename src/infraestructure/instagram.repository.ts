@@ -8,7 +8,7 @@ export class InstagramRepository {
       const config = {
         method: "get",
         maxBodyLength: Infinity,
-        url: "https://graph.instagram.com/v21.0/17841445304880840/media?access_token=IGQWROWE9BZAVNPUWpnbmpRdnlReDB1aDdfemRfdHpKR1RrNmpiRUplLWJjUjQyRlNnMVRxcmMxSzZASNjRGWkFxaWhfSXpMNnVzYlFfMzZAjNWNoSi1yci1FOW1BaVdiOGdodllfSDBLWGJtXzdyUXBJOTRTZAXV5c0kZD&fields=id,media_type,media_url,permalink",
+        url: `${location.hostname === "localhost" ? "http://localhost:3000" : "https://la-granja-escarp-be.onrender.com"}/instagram-api`,
         headers: {},
       };
 

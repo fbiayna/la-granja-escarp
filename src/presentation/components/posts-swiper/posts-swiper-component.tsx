@@ -18,7 +18,7 @@ const SwiperCarouselComponent = ({ posts }: SwiperCarouselProps) => {
   return (
     <Swiper
       modules={[Grid, Pagination, Navigation]}
-      spaceBetween={5}
+      spaceBetween={20}
       slidesPerView={4}
       grid={{
         rows: 2,
@@ -28,7 +28,14 @@ const SwiperCarouselComponent = ({ posts }: SwiperCarouselProps) => {
         clickable: true,
       }}
       navigation={true}
-      style={{ padding: "20px" }}
+      breakpoints={{
+        0: {
+          slidesPerView: 2,
+        },
+        640: {
+          slidesPerView: 3,
+        },
+      }}
     >
       {posts.map((post) => (
         <SwiperSlide key={post.id}>
@@ -36,7 +43,11 @@ const SwiperCarouselComponent = ({ posts }: SwiperCarouselProps) => {
             src={post.mediaURL}
             alt={`Post ${post.id}`}
             className="swiper-image"
-            style={{ width: "300px", height: "300px", objectFit: "cover" }}
+            style={{
+              width: "300px",
+              height: "300px",
+              objectFit: "cover",
+            }}
           />
         </SwiperSlide>
       ))}

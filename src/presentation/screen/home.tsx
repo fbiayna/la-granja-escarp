@@ -148,9 +148,7 @@ const Home = () => {
       <div
         style={{
           display: "flex",
-          width: "80%",
-          justifyContent: "center",
-          alignItems: "center",
+          width: "100%",
         }}
       >
         {posts?.length ? <SwiperCarouselComponent posts={posts} /> : null}
