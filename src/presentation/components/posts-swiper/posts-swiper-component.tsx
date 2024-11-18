@@ -39,16 +39,18 @@ const SwiperCarouselComponent = ({ posts }: SwiperCarouselProps) => {
     >
       {posts.map((post) => (
         <SwiperSlide key={post.id}>
-          <img
-            src={post.mediaURL}
-            alt={`Post ${post.id}`}
-            className="swiper-image"
-            style={{
-              width: "300px",
-              height: "300px",
-              objectFit: "cover",
-            }}
-          />
+          <a href={post.permalink} target="_blank" rel="noopener noreferrer">
+            <img
+              src={post.mediaURL}
+              alt={`Post ${post.id}`}
+              className="swiper-image"
+              style={{
+                width: "300px",
+                height: "300px",
+                objectFit: "cover",
+              }}
+            />
+          </a>
         </SwiperSlide>
       ))}
     </Swiper>
