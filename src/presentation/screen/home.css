@@ -28,6 +28,10 @@
   margin-bottom: 20px;
 }
 
+.instagram-title {
+  margin-top: 0px;
+}
+
 .home-subtitle {
   font-family: "NeulisAlt-SemiBold";
   font-size: 18px;
@@ -76,6 +80,10 @@
 @media screen and (min-width: 1024px) {
   .home-description-container {
     padding: 75px;
+  }
+
+  .instagram-title {
+    margin-top: 50px;
   }
 
   .home-title {

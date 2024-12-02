@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { GetAllSpotsUseCase } from "../../application/useCases/getAllSpotsUseCase";
+import { GetAllSpotsUseCase } from "../../application/useCases/get-all-spots.use-case";
 import { SpotRepository } from "../../infraestructure/spot.repository";
 import Spot from "../../domain/entities/spot";
 import SpotComponent from "../components/spot/spot-component";
@@ -11,6 +11,11 @@ import HeaderComponent from "../components/header/header-component";
 import FooterComponent from "../components/footer/footer-component";
 import AppStateContext from "../../application/context/app-state.context";
 import { Helmet } from "react-helmet-async";
+import { GetPostsFromUserIdUseCase } from "../../application/useCases/get-posts-from-user-id.use-case";
+import { InstagramRepository } from "../../infraestructure/instagram.repository";
+import Post from "../../domain/entities/post";
+import { take } from "rxjs";
+import SwiperCarouselComponent from "../components/posts-swiper/posts-swiper-component";
 
 const Home = () => {
   // Context
@@ -21,17 +26,27 @@ const Home = () => {
 
   const useCases = {
     getSpots: new GetAllSpotsUseCase(new SpotRepository()),
+    getPosts: new GetPostsFromUserIdUseCase(new InstagramRepository()),
   };
 
   // States
 
   const [spots, setSpots] = useState<Spot[]>();
+  const [posts, setPosts] = useState<Post[]>();
 
   // Effects
 
   useEffect(() => {
     const loadedSpots = useCases.getSpots.getAll();
     setSpots(loadedSpots);
+
+    useCases.getPosts
+      .getPostsFromUserId()
+      .pipe(take(1))
+      .subscribe({
+        next: (posts) => setPosts(posts),
+        error: (error) => console.log(error),
+      });
   }, []);
 
   // Render
@@ -128,6 +143,13 @@ const Home = () => {
           />
         );
       })}
+
+      {posts?.length ? (
+        <h2 className="home-title instagram-title">
+          Més contingut al nostre Instagram
+        </h2>
+      ) : null}
+      {posts?.length ? <SwiperCarouselComponent posts={posts} /> : null}
 
       <MoturismeComponent />
 
