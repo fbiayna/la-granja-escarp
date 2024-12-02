@@ -144,15 +144,12 @@ const Home = () => {
         );
       })}
 
-      <h2 className="home-title">Més contingut al nostre Instagram</h2>
-      <div
-        style={{
-          display: "flex",
-          width: "100%",
-        }}
-      >
-        {posts?.length ? <SwiperCarouselComponent posts={posts} /> : null}
-      </div>
+      {posts?.length ? (
+        <h2 className="home-title instagram-title">
+          Més contingut al nostre Instagram
+        </h2>
+      ) : null}
+      {posts?.length ? <SwiperCarouselComponent posts={posts} /> : null}
 
       <MoturismeComponent />
 

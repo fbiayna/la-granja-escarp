@@ -1,6 +1,33 @@
-.post-image {
+.instagram-carousel {
+  width: 80%;
+  margin: 0 auto;
+  margin-block: 20px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-instagram-container {
   width: 100%;
-  height: auto;
+  padding-top: 100%;
+  position: relative;
+}
+
+.image-instagram-carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 8px;
+}
+
+@media screen and (min-width: 1024px) {
+  .instagram-carousel {
+    margin-block: 50px;
+  }
 }

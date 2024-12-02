@@ -1,14 +1,15 @@
 import { PostAPIData } from "../../infraestructure/interfaces/post-api-data";
+import { MediaType } from "../interfaces/media-type.enum";
 
 class Post {
   readonly id: string;
-  readonly mediaType: string;
+  readonly mediaType: MediaType;
   readonly mediaURL: string;
   readonly permalink: string;
 
   private constructor(
     id: string,
-    mediaType: string,
+    mediaType: MediaType,
     mediaURL: string,
     permalink: string
   ) {
